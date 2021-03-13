@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   java-8:
-    runs-on: self-tested
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
@@ -18,7 +18,7 @@ jobs:
         export JAVA_OPTS=-Xmx512m
         ./build.sh jar testCI
   java-11:
-    runs-on: self-tested
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 11
